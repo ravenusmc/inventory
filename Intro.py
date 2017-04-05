@@ -19,6 +19,8 @@ class Intro():
     #This method will allow the user to choose which option they want to do.
     def option(self):
         print('\033c')
+        support = Support()
+        intro = Intro()
         print('1. Use Program')
         print('2. Help')
         print('3. Quit')
@@ -29,7 +31,7 @@ class Intro():
         if choice == 1:
             pass
         elif choice == 2:
-            pass
+            support.help()
+            intro.option()
         elif choice == 3:
-            support = Support()
             support.quit()
