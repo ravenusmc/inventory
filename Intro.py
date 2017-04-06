@@ -3,6 +3,7 @@
 #Importing files which will be used
 from valid import *
 from support import *
+from program import *
 
 #This class will contain methods that deal with the basic running of the program
 class Intro():
@@ -21,6 +22,7 @@ class Intro():
         print('\033c')
         support = Support()
         intro = Intro()
+        program = Program()
         print('1. Use Program')
         print('2. Help')
         print('3. Quit')
@@ -29,7 +31,7 @@ class Intro():
             print('That was not a valid selection')
             choice = int(input('What is your choice? '))
         if choice == 1:
-            pass
+            program.base_menu()
         elif choice == 2:
             support.help()
             intro.option()
