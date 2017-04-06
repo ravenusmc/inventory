@@ -8,6 +8,7 @@ from valid import *
 #bathroom they want to work with.
 class Bathroom():
 
+    #This method will allow the user to select the bathroom
     def bathroom_selection(self):
         print('\033c')
         print('1. Master Bathroom')
@@ -26,3 +27,12 @@ class Bathroom():
             return 'Main_level_Bathroom'
         elif choice == 4:
             return 'Basement_Bathroom'
+
+    #This method will allow the user to select the amount of toilet paper. 
+    def tp_amount(self):
+        print('\033c')
+        tp_amount = int(input('Please enter the number of tp rolls counted: '))
+        while not tp_amount_valid(tp_amount):
+            print('That is not a valid selection!')
+            tp_amount = int(input('Please enter the number of tp rolls counted: '))
+        return tp_amount

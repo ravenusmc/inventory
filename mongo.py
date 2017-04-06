@@ -11,12 +11,12 @@ class Database():
         self.db = self.client.inventory #Creating the inventory DB
         self.db.paper = self.db.paper
 
-    def add(self):
+    def add(self, bathroom, tp):
         self.db.paper.insert_one({
-            "bathroom_desc": 'Master',
-            "tp": 5
+            "bathroom_desc": bathroom,
+            "tp": tp
         })
         print('done!')
 
-data = Database()
-data.add()
+# data = Database()
+# data.add()

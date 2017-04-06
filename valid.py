@@ -11,3 +11,7 @@ def valid_bathroom(choice):
         return False
     else:
         return True
+
+def tp_amount_valid(tp_amount):
+    if tp_amount >= 0:
+        return True
