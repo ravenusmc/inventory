@@ -4,4 +4,10 @@ def option_valid(choice):
     if choice < 1 or choice > 3:
         return False
     else:
-        return True 
+        return True
+
+def valid_bathroom(choice):
+    if choice < 1 or choice > 4:
+        return False
+    else:
+        return True
