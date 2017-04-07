@@ -16,21 +16,29 @@ class Program():
         print('\033c')
         bathroom = Bathroom()
         data = Database()
-        print('1. Update Toilet Paper levels')
-        print('2. Check toilet paper amount in specific bathroom')
-        print('3. Show bathrooms with a TP level above a specific amout')
-        print('4. Show bathrooms with a TP level below a specific amout')
+        print('1. Add Toilet Paper document')
+        print('2. Update Toilet Paper levels')
+        print('3. Check toilet paper amount in specific bathroom')
+        print('4. Show bathrooms with a TP level above a specific amout')
+        print('5. Show bathrooms with a TP level below a specific amout')
         choice = int(input('What is your choice '))
         if choice == 1:
             bathroom_selected = bathroom.bathroom_selection()
             tp_amount = bathroom.tp_amount()
-            data.update(bathroom_selected, tp_amount)
+            data.add(bathroom_selected, tp_amount)
             menu.option()
         elif choice == 2:
             bathroom_selected = bathroom.bathroom_selection()
+            tp_amount = bathroom.tp_amount()
+            data.update(bathroom_selected, tp_amount)
+            menu.option()
+        elif choice == 3:
+            bathroom_selected = bathroom.bathroom_selection()
             bathroom_levels = data.find(bathroom_selected)
             for level in bathroom_levels:
-                print(level.tp)
+                print(level)
+            input('Press enter to continue ')
+            menu.option()
         elif choice == 3:
             pass
         elif choice == 4:
