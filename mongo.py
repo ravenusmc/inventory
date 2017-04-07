@@ -11,12 +11,17 @@ class Database():
         self.db = self.client.inventory #Creating the inventory DB
         self.db.paper = self.db.paper
 
-    def add(self, bathroom, tp):
-        self.db.paper.insert_one({
+    #This method will the user to update a record
+    def update(self, bathroom, tp):
+        self.db.paper.insert_one({ #FIX THIS
             "bathroom_desc": bathroom,
             "tp": tp
         })
-        print('done!')
 
-# data = Database()
-# data.add()
+    #This method will allow the user to see how many tp rolls are in a specific
+    #bathroom
+    def find(self, bathroom):
+        bathroom_levels = self.db.paper.find({
+            "bathroom_desc": bathroom
+        })
+        return bathroom_levels

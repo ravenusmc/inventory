@@ -6,7 +6,7 @@ from support import *
 from program import *
 
 #This class will contain methods that deal with the basic running of the program
-class Intro():
+class Menu():
 
     #This method will great the user
     def welcome(self):
@@ -21,7 +21,7 @@ class Intro():
     def option(self):
         print('\033c')
         support = Support()
-        intro = Intro()
+        menu = Menu()
         program = Program()
         print('1. Use Program')
         print('2. Help')
@@ -31,9 +31,9 @@ class Intro():
             print('That was not a valid selection')
             choice = int(input('What is your choice? '))
         if choice == 1:
-            program.base_menu()
+            program.base_menu(menu)
         elif choice == 2:
             support.help()
-            intro.option()
+            menu.option()
         elif choice == 3:
             support.quit()
