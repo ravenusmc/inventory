@@ -22,6 +22,8 @@ class Program():
         print('4. Show bathrooms with a TP level above a specific amout')
         print('5. Show bathrooms with a TP level below a specific amout')
         choice = int(input('What is your choice '))
+        print()
+        #NEED VALIDATION LINES HERE
         if choice == 1:
             bathroom_selected = bathroom.bathroom_selection()
             tp_amount = bathroom.tp_amount()
@@ -36,7 +38,7 @@ class Program():
             bathroom_selected = bathroom.bathroom_selection()
             bathroom_levels = data.find(bathroom_selected)
             for level in bathroom_levels:
-                print(level)
+                print('The amount of TP in the', level['bathroom_desc'], 'is', level['tp'], 'rolls.')
             input('Press enter to continue ')
             menu.option()
         elif choice == 3:

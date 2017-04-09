@@ -27,7 +27,6 @@ class Database():
                     "tp": tp
             },
         })
-        print('done')
 
     #This method will allow the user to see how many tp rolls are in a specific
     #bathroom
