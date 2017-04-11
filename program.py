@@ -12,6 +12,9 @@ from menu import *
 #This class will contain the methods that will run the heart of the program.
 class Program():
 
+    #This method is what will actually allow the user to use the inventory portion
+    #of the program. I have to admit that this method is quite long and I probably
+    #should have broken it up into smaller parts.
     def base_menu(self, menu):
         print('\033c')
         bathroom = Bathroom()
@@ -51,5 +54,13 @@ class Program():
             print()
             input('Press enter to continue ')
             menu.option()
-        elif choice == 4:
-            pass
+        elif choice == 5:
+            print('Here you will be asked to enter a number of tp rolls to see which bathrooms have that many')
+            tp_amount = bathroom.tp_amount()
+            bathroom_levels = data.find_specific_lt(tp_amount)
+            print('Here are the bathrooms with the amount of TP you asked for:')
+            for level in bathroom_levels:
+                print('The amount of TP in the', level['bathroom_desc'], 'is', level['tp'], 'rolls.')
+            print()
+            input('Press enter to continue ')
+            menu.option()
