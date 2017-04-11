@@ -41,7 +41,15 @@ class Program():
                 print('The amount of TP in the', level['bathroom_desc'], 'is', level['tp'], 'rolls.')
             input('Press enter to continue ')
             menu.option()
-        elif choice == 3:
-            pass
+        elif choice == 4:
+            print('Here you will be asked to enter a number of tp rolls to see which bathrooms have that many')
+            tp_amount = bathroom.tp_amount()
+            bathroom_levels = data.find_specific_gt(tp_amount)
+            print('Here are the bathrooms with the amount of TP you asked for:')
+            for level in bathroom_levels:
+                print('The amount of TP in the', level['bathroom_desc'], 'is', level['tp'], 'rolls.')
+            print()
+            input('Press enter to continue ')
+            menu.option()
         elif choice == 4:
             pass

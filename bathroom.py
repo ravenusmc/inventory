@@ -28,7 +28,7 @@ class Bathroom():
         elif choice == 4:
             return 'Basement_Bathroom'
 
-    #This method will allow the user to select the amount of toilet paper. 
+    #This method will allow the user to select the amount of toilet paper.
     def tp_amount(self):
         print('\033c')
         tp_amount = int(input('Please enter the number of tp rolls counted: '))
