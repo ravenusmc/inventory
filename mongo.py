@@ -35,3 +35,11 @@ class Database():
             "bathroom_desc": bathroom
         })
         return bathroom_levels
+
+    #This method will allow the user to find which bathrooms have a certain number
+    #of tp rolls above a certain number.
+    def find_specific_gt(self, tp):
+        bathroom_levels = self.db.paper.find({
+            "tp": {"$gt:" tp }
+        })
+        return bathroom_levels
