@@ -8,6 +8,7 @@ import bcrypt
 #importing my own files for the project
 from valid import *
 
+#This class will deal with the logging in of users as well as dealing with the admin role
 class Login():
 
     def __init__(self):
@@ -18,11 +19,17 @@ class Login():
     #This method will insert the admin user into the program. In a real world
     #program I would have the password better hidden. See the create class.
     def insert_admin(self, password):
-        pass
-        # self.db.users.insert_one({
-        #     "username": "admin",
-        #     "password": password
-        # })
+        check_admin = self.db.users.find_one({
+            "username": "admin",
+        });
+        if str(check_admin) == 'None':
+            self.db.users.insert_one({
+                "username": "admin",
+                "password": password
+            })
+        else:
+            print('Admin is present in DB')
+            input('Press Enter')
 
     #This method will allow the user to log into the program.
     def login_screen(self, password, hashed):
@@ -77,6 +84,8 @@ class Login():
             password = 'fake'
             return username, password
 
+
+    #### THE BELOW IS KEPT ONLY FOR REFERENCE #######
     #This was the old create_account I ran into way to many problems doing it this
     #way and ended up with way short code above!!!!
     # def create_account(self, password, hashed):

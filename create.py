@@ -4,7 +4,6 @@
 #importing files which will be used in this files
 import bcrypt
 
-
 #This class will create the user and encrpy the admin password
 class Create():
 

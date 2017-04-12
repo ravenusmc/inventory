@@ -3,7 +3,6 @@
 #importing files which will be used in this program
 from valid import *
 
-
 #This class will hold all of the methods for allowing the user to select which
 #bathroom they want to work with.
 class Bathroom():

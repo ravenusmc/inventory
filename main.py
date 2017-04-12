@@ -20,6 +20,8 @@ def main():
     username, password = login.login_screen(password, hashed)
     #checking to see if the username and password match.
     flag = login.check(username, password)
+    #Here I use a conditional statement to test whether the program has an intruder or
+    #not. 
     if flag == False:
         intruder()
     else:

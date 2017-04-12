@@ -23,6 +23,7 @@ class Menu():
         support = Support()
         menu = Menu()
         program = Program()
+        print('Menu Options')
         print('1. Use Program')
         print('2. Help')
         print('3. Quit')
