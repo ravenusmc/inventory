@@ -12,12 +12,6 @@ class Create():
     #actually be hidden so that a bad person AKA a hacker, does not use the
     #password. The main purpose of this code is just to see how to use bcrypt.
     def encrypt_pass(self):
-        #name = 'AdminTest'
         password = b"AdminTest"
         hashed = bcrypt.hashpw(password, bcrypt.gensalt())
         return password, hashed
-
-        # if bcrypt.hashpw(password, hashed) == hashed:
-        #   print('it matches!')
-        # else:
-        #   print('no match')

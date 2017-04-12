@@ -27,6 +27,10 @@ class Login():
     #This method will allow the user to log into the program.
     def login_screen(self, password, hashed):
         print('\033c')
+        print('------------')
+        print('Login Screen')
+        print('------------')
+        print()
         print('1. Yes, I have an account')
         print('2. No, I don\'t have an account')
         choice = int(input('Do you have an account? (1/2) '))

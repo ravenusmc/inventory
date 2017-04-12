@@ -10,6 +10,8 @@ def main():
     #creating objects
     create = Create()
     login = Login()
+    menu = Menu()
+    menu.welcome()
     #encrptying admin password
     password, hashed = create.encrypt_pass()
     #Creating an admin account in the database
@@ -21,8 +23,6 @@ def main():
     if flag == False:
         intruder()
     else:
-        menu = Menu()
-        menu.welcome()
         menu.option()
 
 #This function will be called if the user enters the wrong username and password
