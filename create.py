@@ -10,12 +10,12 @@ class Create():
 
     #This method will encrpy the passwood. In a real world example this would
     #actually be hidden so that a bad person AKA a hacker, does not use the
-    #password. The main purpose of this code is just to see how to use bcrypt. 
+    #password. The main purpose of this code is just to see how to use bcrypt.
     def encrypt_pass(self):
-        name = 'AdminTest'
-        password = b"name"
-        hashed = bcrypt.hashpw(password, bcrypt.gensalt(14))
-        return hashed
+        #name = 'AdminTest'
+        password = b"AdminTest"
+        hashed = bcrypt.hashpw(password, bcrypt.gensalt())
+        return password, hashed
 
         # if bcrypt.hashpw(password, hashed) == hashed:
         #   print('it matches!')

@@ -7,13 +7,31 @@ from login import *
 
 #This is the main function of the program that actually starts it.
 def main():
+    #creating objects
     create = Create()
     login = Login()
-    password = create.encrypt_pass()
-    login.insert_admin(password)
-    menu = Menu()
-    menu.welcome()
-    menu.option()
+    #encrptying admin password
+    password, hashed = create.encrypt_pass()
+    #Creating an admin account in the database
+    login.insert_admin(hashed)
+    #allowing the user to log in.
+    username, password = login.login_screen(password, hashed)
+    #checking to see if the username and password match.
+    flag = login.check(username, password)
+    if flag == False:
+        intruder()
+    else:
+        menu = Menu()
+        menu.welcome()
+        menu.option()
+
+#This function will be called if the user enters the wrong username and password
+def intruder():
+    print('\033c')
+    print('You are an intruder and not supposed to be using this program!!!')
+    print('The authorities have been notified!!!')
+    print('Leave now!')
+    input('Press enter to close the program and save your soul!!!')
 
 #Calling the main function to launch the program
 main()
