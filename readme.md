@@ -11,7 +11,10 @@ use it with Mongo DB.
 What this project is able to do: Create users, let users log in, track the amount
 of toilet paper in my house. Search for toilet paper levels using greater than
 or less than with Mongo DB. Updating records. Again, simple project making an
-inventory tracking system of toilet paper levels. 
+inventory tracking system of toilet paper levels.
+
+One thing that I did not do in this project was make my classes private. Something
+that I could easily take up and fix at another time. 
 
 
 # Getting started

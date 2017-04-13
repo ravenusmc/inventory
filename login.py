@@ -27,9 +27,10 @@ class Login():
                 "username": "admin",
                 "password": password
             })
-        else:
-            print('Admin is present in DB')
-            input('Press Enter')
+        #Code here was for my own reference. It is not needed in the final product.
+        # else:
+        #     print('Admin is present in DB')
+        #     input('Press Enter')
 
     #This method will allow the user to log into the program.
     def login_screen(self, password, hashed):

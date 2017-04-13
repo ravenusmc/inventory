@@ -8,7 +8,7 @@ from program import *
 #This class will contain methods that deal with the basic running of the program
 class Menu():
 
-    #This method will great the user
+    #This method will greet the user
     def welcome(self):
         print('\033c')
         print('------------------------------')
