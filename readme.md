@@ -14,7 +14,7 @@ or less than with Mongo DB. Updating records. Again, simple project making an
 inventory tracking system of toilet paper levels.
 
 One thing that I did not do in this project was make my classes private. Something
-that I could easily take up and fix at another time. 
+that I could easily take up and fix at another time.
 
 
 # Getting started
@@ -32,4 +32,4 @@ Once the program is downloaded, simply run the program as you would any other py
 
 # Preview
 
-To see a video that talks about this project please go here: COMING SOON
+To see a video that talks about this project please go here: https://www.youtube.com/watch?v=Z9piHJlSGtE
